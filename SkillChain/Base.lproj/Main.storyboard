@@ -17,6 +17,12 @@
                     <view key="view" contentMode="scaleToFill" id="HKG-wY-veV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSX-vG-T9P">
+                                <rect key="frame" x="88" y="165" width="199" height="342"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.45161694289999998" green="0.55673557520000005" blue="0.58633476500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="rWi-76-3iR"/>
                     </view>
@@ -28,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsd-Qc-cEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="788"/>
+            <point key="canvasLocation" x="-855.20000000000005" y="787.55622188905556"/>
         </scene>
         <!--Get Help-->
         <scene sceneID="7gO-V3-pNH">
@@ -37,6 +43,12 @@
                     <view key="view" contentMode="scaleToFill" id="oub-5u-Rvh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9r-Sg-cm6">
+                                <rect key="frame" x="54" y="245" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.45161694289999998" green="0.55673557520000005" blue="0.58633476500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="WG6-VS-sOL"/>
                     </view>
@@ -92,9 +104,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-5f-ebM">
+                                <rect key="frame" x="134" y="66" width="107" height="99"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-zX-RYm">
+                                <rect key="frame" x="168" y="561" width="39" height="37"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WuJ-hN-kvH" appends="YES" id="R30-Je-bL6"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.45161694289999998" green="0.55673557520000005" blue="0.58633476500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Fg1-zX-RYm" firstAttribute="leading" secondItem="pgP-ig-H0k" secondAttribute="leading" constant="168" id="AKr-vL-39j"/>
+                            <constraint firstItem="pgP-ig-H0k" firstAttribute="trailing" secondItem="Fg1-zX-RYm" secondAttribute="trailing" constant="168" id="EeS-6y-dL9"/>
+                            <constraint firstItem="Fg1-zX-RYm" firstAttribute="top" secondItem="e9c-5f-ebM" secondAttribute="bottom" constant="396" id="Sf7-qb-IdQ"/>
+                            <constraint firstItem="pgP-ig-H0k" firstAttribute="bottom" secondItem="Fg1-zX-RYm" secondAttribute="bottom" constant="20" id="xvh-P1-Xfv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pgP-ig-H0k"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WuJ-hN-kvH" appends="YES" id="JZo-PW-Uob"/>
+                            <outletCollection property="gestureRecognizers" destination="WuJ-hN-kvH" appends="YES" id="Ney-RO-hd2"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="wQQ-SS-Krq">
                         <color key="badgeColor" red="0.080591060221195221" green="0.25822645425796509" blue="0.31269598007202148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,8 +136,21 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2P-Ww-3q5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="WuJ-hN-kvH">
+                    <connections>
+                        <outlet property="delegate" destination="Fg1-zX-RYm" id="z2R-5h-yLB"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-855.20000000000005" y="112.89355322338831"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="S10-jO-C8s">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="efB-op-40q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CQ-gi-PT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="112"/>
         </scene>
         <!--loginScreen-->
         <scene sceneID="7nP-6s-PQY">
