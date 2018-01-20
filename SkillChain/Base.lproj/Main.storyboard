@@ -104,9 +104,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-5f-ebM">
-                                <rect key="frame" x="134" y="66" width="107" height="99"/>
-                            </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-zX-RYm">
                                 <rect key="frame" x="168" y="561" width="39" height="37"/>
                                 <connections>
@@ -119,7 +116,6 @@
                         <constraints>
                             <constraint firstItem="Fg1-zX-RYm" firstAttribute="leading" secondItem="pgP-ig-H0k" secondAttribute="leading" constant="168" id="AKr-vL-39j"/>
                             <constraint firstItem="pgP-ig-H0k" firstAttribute="trailing" secondItem="Fg1-zX-RYm" secondAttribute="trailing" constant="168" id="EeS-6y-dL9"/>
-                            <constraint firstItem="Fg1-zX-RYm" firstAttribute="top" secondItem="e9c-5f-ebM" secondAttribute="bottom" constant="396" id="Sf7-qb-IdQ"/>
                             <constraint firstItem="pgP-ig-H0k" firstAttribute="bottom" secondItem="Fg1-zX-RYm" secondAttribute="bottom" constant="20" id="xvh-P1-Xfv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pgP-ig-H0k"/>
