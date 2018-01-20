@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B81820D7DC075D52AB35505 /* Pods_SkillChainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDFE5E2FABBE346324D0D63 /* Pods_SkillChainTests.framework */; };
 		5C52309C20135DCF00843B11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C52309B20135DCF00843B11 /* GoogleService-Info.plist */; };
+		5C52309E2013679100843B11 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52309D2013679100843B11 /* SignInViewController.swift */; };
+		5C5230A0201367A000843B11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52309F201367A000843B11 /* LoginViewController.swift */; };
 		8240750E200B87B000737CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8240750D200B87B000737CE4 /* AppDelegate.swift */; };
 		82407510200B87B000737CE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8240750F200B87B000737CE4 /* ViewController.swift */; };
 		82407513200B87B000737CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82407511200B87B000737CE4 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		1BDFE5E2FABBE346324D0D63 /* Pods_SkillChainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillChainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		224AAF1B9041A588CF5253D0 /* Pods_SkillChain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillChain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C52309B20135DCF00843B11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C52309D2013679100843B11 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5C52309F201367A000843B11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		60C11787886A65D25A30EE4C /* Pods-SkillChainUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillChainUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillChainUITests/Pods-SkillChainUITests.release.xcconfig"; sourceTree = "<group>"; };
 		627D06A3E5D7966E84E9ECD1 /* Pods-SkillChainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillChainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillChainTests/Pods-SkillChainTests.release.xcconfig"; sourceTree = "<group>"; };
 		632F6372D42800B2C3412900 /* Pods-SkillChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillChain.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillChain/Pods-SkillChain.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				82407514200B87B000737CE4 /* Assets.xcassets */,
 				82407516200B87B000737CE4 /* LaunchScreen.storyboard */,
 				82407519200B87B000737CE4 /* Info.plist */,
+				5C52309D2013679100843B11 /* SignInViewController.swift */,
+				5C52309F201367A000843B11 /* LoginViewController.swift */,
 			);
 			path = SkillChain;
 			sourceTree = "<group>";
@@ -469,8 +475,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C52309E2013679100843B11 /* SignInViewController.swift in Sources */,
 				82407510200B87B000737CE4 /* ViewController.swift in Sources */,
 				8240753C200B8C4100737CE4 /* RoundedButton.swift in Sources */,
+				5C5230A0201367A000843B11 /* LoginViewController.swift in Sources */,
 				8240750E200B87B000737CE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

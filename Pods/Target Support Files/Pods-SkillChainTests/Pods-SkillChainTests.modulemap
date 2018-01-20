@@ -1,0 +1,6 @@
+framework module Pods_SkillChainTests {
+  umbrella header "Pods-SkillChainTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

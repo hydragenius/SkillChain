@@ -180,7 +180,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="64I-Md-fwz" kind="show" id="wQ0-81-Lk4"/>
+                                            <segue destination="64I-Md-fwz" kind="show" id="XKb-Z7-ZNx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -238,7 +238,7 @@
         <!--Login-->
         <scene sceneID="KAM-na-DsB">
             <objects>
-                <viewController title="Login" id="sUJ-it-NAl" sceneMemberID="viewController">
+                <viewController title="Login" id="sUJ-it-NAl" customClass="LoginViewController" customModule="SkillChain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fYM-QM-2IT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,39 +310,39 @@
             </objects>
             <point key="canvasLocation" x="-2560.8000000000002" y="384.55772113943033"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="Ahq-zr-kXt">
             <objects>
-                <viewController id="64I-Md-fwz" sceneMemberID="viewController">
+                <viewController id="64I-Md-fwz" customClass="SignInViewController" customModule="SkillChain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H8u-xs-V9y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your Username and Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-O5-bbS">
-                                <rect key="frame" x="24" y="136.5" width="327" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Choose your Username and Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-O5-bbS">
+                                <rect key="frame" x="24" y="92.5" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mailadress" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCZ-uw-v8f">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mailadress" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCZ-uw-v8f">
                                 <rect key="frame" x="94" y="266" width="186" height="30"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-ms-YAA">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-ms-YAA">
                                 <rect key="frame" x="94" y="316" width="186" height="30"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="repeat Password" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dA-aE-AR5">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="repeat Password" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dA-aE-AR5">
                                 <rect key="frame" x="94" y="416" width="186" height="30"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCM-U2-Y0p" customClass="RoundedButton" customModule="SkillChain" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCM-U2-Y0p" customClass="RoundedButton" customModule="SkillChain" customModuleProvider="target">
                                 <rect key="frame" x="106" y="504" width="162" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign In">
@@ -359,12 +359,15 @@
                                         <color key="value" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInButton:" destination="64I-Md-fwz" eventType="touchUpInside" id="cGU-8g-mgp"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7E-pJ-B5W">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7E-pJ-B5W">
                                 <rect key="frame" x="94" y="366" width="186" height="30"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.080591060221195221" green="0.25822645425796509" blue="0.31269598007202148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -396,6 +399,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eMg-rh-mIN"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="3dA-aE-AR5" id="fNN-BH-u55"/>
+                        <outlet property="mailTextField" destination="dCZ-uw-v8f" id="24G-10-fep"/>
+                        <outlet property="passwordTextField" destination="o7E-pJ-B5W" id="l5b-I6-0tj"/>
+                        <outlet property="usernameTextField" destination="UmF-ms-YAA" id="xgR-RA-QpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kw-w2-CBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,7 +413,7 @@
         <!--SkillChain-->
         <scene sceneID="QAa-QA-MfG">
             <objects>
-                <tabBarController title="SkillChain" hidesBottomBarWhenPushed="YES" id="22Q-gW-cKD" colorLabel="IBBuiltInLabel-Blue" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SkillChainHome" title="SkillChain" hidesBottomBarWhenPushed="YES" id="22Q-gW-cKD" colorLabel="IBBuiltInLabel-Blue" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="6ZQ-9H-HAk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
