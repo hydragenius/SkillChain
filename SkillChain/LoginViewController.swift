@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +25,50 @@ class LoginViewController: UIViewController {
     }
     
 
+
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBAction func loginButtonClicked(_ sender: RoundedButton) {
+        
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error == nil {
+                
+                if user?.isEmailVerified == true {
+                
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SkillChainHome")
+                self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    let alertController = UIAlertController(title: "Error", message: "Please verify your account. Check your E-Mail.", preferredStyle: .actionSheet)
+                    
+                    let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+                
+            } else{
+                
+                let alertController = UIAlertController(title: "Error", message: "E-Mail or password is incorrect!", preferredStyle: .actionSheet)
+                
+                let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+            }
+            
+            
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
