@@ -41,7 +41,6 @@ func checkUserExists(userID: String) -> Bool{
             }
         }
     })
-    
     if userExists == true {
         print(" GEILSE ASDFLSIFASDFASJDF")
         return true

@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
-class AddNewIssueViewController: UIViewController {
+class AddNewIssueViewController: UIViewController, UITableViewDelegate/*, UITableViewDataSource*/ {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,45 @@ class AddNewIssueViewController: UIViewController {
     
     @IBOutlet weak var priceTextField: UITextField!
     
+    /*let issue = "issue"
+     
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+     {
+     return(issue.count)
+     
+     }
+     
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+     {
+     let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+     cell.textLabel?.text = issue[indexPath.row]
+     return(cell)
+     
+     }
+ */
+    let issue = "issue"
+    
+    var ref:DatabaseReference?
+    
     @IBAction func saveButton(_ sender: UIButton) {
-    }
+        ref = Database.database().reference()
+        if titleTextField != nil
+            
+        {
+            ref?.child(issue).childByAutoId().setValue(titleTextField.text)
+    
+        }
+        
+        if descriptionTextField != nil
+        {
+            ref?.child(issue).childByAutoId().setValue(descriptionTextField.text)
+        }
+        
+        if priceTextField != nil
+        {
+            ref?.child(issue).childByAutoId().setValue(priceTextField.text)
+        }
+ 
     /*
     // MARK: - Navigation
 
@@ -39,4 +78,5 @@ class AddNewIssueViewController: UIViewController {
     }
     */
 
+}
 }
