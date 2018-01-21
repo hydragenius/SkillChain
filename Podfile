@@ -8,6 +8,7 @@ target 'SkillChain' do
   # Pods for SkillChain
   pod ‘Firebase/Core'
   pod ‘Firebase/Auth'
+  pod ‘Firebase/Database'
 
   target 'SkillChainTests' do
     inherit! :search_paths

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class LoginViewController: UIViewController {
 
         self.hideKeyboardWhenTappedAround()
         
+        // ref to database root
+        //let databaseRoot = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,14 +32,38 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
+    @IBAction func passwordTextFieldMask(_ sender: UITextField) {
+        
+        passwordTextField.isSecureTextEntry = true
+        
+    }
+    
+    
     @IBAction func loginButtonClicked(_ sender: RoundedButton) {
         
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error == nil {
                 
+                // Login user if mail is verified
+
                 if user?.isEmailVerified == true {
                 
+                    //var databaseRoot = Database.database()
+                    let userID = user!.uid
+                    let userExistCheck: Bool = checkUserExists(userID: userID)
+                    
+                    
+                    
+                    if userExistCheck == false{
+                        // add new User with UID if not listed in database yet
+                        addNewUser(userID: userID)
+                        
+                    }
+                    
+                    // update mail field o
+                    
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "SkillChainHome")
                 self.present(vc!, animated: true, completion: nil)
                     

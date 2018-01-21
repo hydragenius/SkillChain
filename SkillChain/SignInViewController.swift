@@ -46,7 +46,20 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
+    
+    
+    @IBAction func passwordTextFieldMask(_ sender: UITextField) {
+        
+        passwordTextField.isSecureTextEntry = true
+        
+    }
+    
+    @IBAction func confirmPasswordTextFieldMask(_ sender: Any) {
+        
+        confirmPasswordTextField.isSecureTextEntry = true
+        
+    }
+    
     
     @IBAction func signInButton(_ sender: RoundedButton) {
         

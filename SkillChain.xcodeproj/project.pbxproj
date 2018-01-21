@@ -11,6 +11,8 @@
 		5C52309C20135DCF00843B11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C52309B20135DCF00843B11 /* GoogleService-Info.plist */; };
 		5C52309E2013679100843B11 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52309D2013679100843B11 /* SignInViewController.swift */; };
 		5C5230A0201367A000843B11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52309F201367A000843B11 /* LoginViewController.swift */; };
+		821863392014A7210086C50E /* Database Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821863382014A7210086C50E /* Database Functions.swift */; };
+		8218633B2014D3E20086C50E /* AddNewIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218633A2014D3E20086C50E /* AddNewIssueViewController.swift */; };
 		8240750E200B87B000737CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8240750D200B87B000737CE4 /* AppDelegate.swift */; };
 		82407510200B87B000737CE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8240750F200B87B000737CE4 /* ViewController.swift */; };
 		82407513200B87B000737CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82407511200B87B000737CE4 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		627D06A3E5D7966E84E9ECD1 /* Pods-SkillChainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillChainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillChainTests/Pods-SkillChainTests.release.xcconfig"; sourceTree = "<group>"; };
 		632F6372D42800B2C3412900 /* Pods-SkillChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillChain.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkillChain/Pods-SkillChain.release.xcconfig"; sourceTree = "<group>"; };
 		72B2D92AE2D42AAE846F027C /* Pods-SkillChainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillChainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkillChainTests/Pods-SkillChainTests.debug.xcconfig"; sourceTree = "<group>"; };
+		821863382014A7210086C50E /* Database Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Database Functions.swift"; sourceTree = "<group>"; };
+		8218633A2014D3E20086C50E /* AddNewIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewIssueViewController.swift; sourceTree = "<group>"; };
 		8240750A200B87B000737CE4 /* SkillChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8240750D200B87B000737CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8240750F200B87B000737CE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		8240750C200B87B000737CE4 /* SkillChain */ = {
 			isa = PBXGroup;
 			children = (
+				8218633A2014D3E20086C50E /* AddNewIssueViewController.swift */,
+				821863382014A7210086C50E /* Database Functions.swift */,
 				5C52309B20135DCF00843B11 /* GoogleService-Info.plist */,
 				8240753B200B8C4100737CE4 /* RoundedButton.swift */,
 				8240750D200B87B000737CE4 /* AppDelegate.swift */,
@@ -404,12 +410,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SkillChain/Pods-SkillChain-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,10 +484,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C52309E2013679100843B11 /* SignInViewController.swift in Sources */,
+				8218633B2014D3E20086C50E /* AddNewIssueViewController.swift in Sources */,
 				82407510200B87B000737CE4 /* ViewController.swift in Sources */,
 				8240753C200B8C4100737CE4 /* RoundedButton.swift in Sources */,
 				5C5230A0201367A000843B11 /* LoginViewController.swift in Sources */,
 				8240750E200B87B000737CE4 /* AppDelegate.swift in Sources */,
+				821863392014A7210086C50E /* Database Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
